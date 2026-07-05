@@ -2,7 +2,21 @@
 
 Talenha is a programming language and a rules definition language to construct a DSL with splitters system and transformation rules.
 
+# But, what can I say to someone about Talenha ?
+
+Talenha is a meta-programming language designed to create domain-specific languages (DSLs) through a system of splitters and transformation rules.
+It focuses on generating and transforming source code.
+
+# What makes it different
+
+- DSL creation and usage inside the language itself
+- text transformation system
+- structured parsing with splitters
+- code generation oriented design
+
 # How it works ?
+
+## Level 1
 
 It serves for generating code. You can learn the default language, it needs to start with [<<[ and end with ]>>] to write code:
 example:
@@ -17,6 +31,8 @@ example:
 
 The main purpose of Talenha is to generate code. It is a web site with a text editor included into the web site and it handle a system folder to write files.
 
+## Level 2
+
 To generate code, you can use DSL (Domain Specific Language) that you can create yourself.
 
 For example:
@@ -28,7 +44,7 @@ For example:
 ]>>]
 </code>
 
-# Examples
+# Level 3
 
 It is a csv data. And with Talenha, you can read the csv. Like this:
 
@@ -48,6 +64,9 @@ It is a csv data. And with Talenha, you can read the csv. Like this:
 
 Concatenation of string is obtained with no operator. Now,
 
+
+# Level 4
+
 <code>
 [<<[
 
@@ -61,6 +80,8 @@ Concatenation of string is obtained with no operator. Now,
 </code>
 
 # Features
+
+## DSL
 
 You can create your own DSL by writing this in Talenha:
 
@@ -77,6 +98,8 @@ You can create your own DSL by writing this in Talenha:
 ]>>]
 </code>
 
+## Functions
+
 You can write functions in Talenha.
 
 <code>
@@ -91,7 +114,9 @@ You can write functions in Talenha.
 ]>>]
 </code>
 
-A function is usable in any file in Talenha because functions are recorded into a MySQL data and keep the AST tree into a field of a table for each function.
+A function is usable in any file in Talenha.
+
+## Sandbox functions
 
 In Talenha, you can write:
 
@@ -105,6 +130,8 @@ In Talenha, you can write:
 </code>
 
 Now, x is a sandbox function. The function can be passed to a function by parameters and you can call your function by using x(params...).
+
+## Select statement
 
 In Talenha, you can write:
 
@@ -124,6 +151,8 @@ In Talenha, you can write:
 
 You can create a switch with the select function.
 
+## Jump statement
+
 In Talenha, you can use jump statement in a select statement.
 
 <code>
@@ -141,6 +170,8 @@ In Talenha, you can use jump statement in a select statement.
 </code>
 
 You can compose exceptions with the help of jump statement.
+
+## Jump as an exception
 
 <code>
 [<<[
@@ -166,5 +197,3 @@ The thinking of Talenha is that looks like an assembler language. The goal of Ta
 
 
 
-
-  Gool
