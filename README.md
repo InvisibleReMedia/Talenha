@@ -132,7 +132,24 @@ In Talenha, you can use jump statement in a select statement.
 ]>>]
 </code>
 
+You can compose exceptions with the help of jump statement.
 
+<code>
+[<<[
+fun callFunction(x) {
+  if (x == 0) { jump "error" }
+}
+
+select {
+  default {
+    callFunction(0)
+  },
+  error {
+    ...handle error...
+  }
+}
+]>>]
+</code>
 
 
 
