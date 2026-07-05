@@ -151,6 +151,9 @@ select {
 ]>>]
 </code>
 
+The thinking of Talenha is that looks like an assembler language. The goal of Talenha is to generate any text source code.
+
+
 
 
 
