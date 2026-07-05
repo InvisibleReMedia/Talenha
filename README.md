@@ -9,6 +9,12 @@ It focuses on generating and transforming source code.
 
 # What makes it different
 
+Talenha is not just a programming language.
+
+It is a language for building languages.
+
+It allows you to:
+
 - DSL creation and usage inside the language itself
 - text transformation system
 - structured parsing with splitters
@@ -16,9 +22,14 @@ It focuses on generating and transforming source code.
 
 # How it works ?
 
+Talenha uses a delimited execution model.
+
 ## Level 1
 
 It serves for generating code. You can learn the default language, it needs to start with [<<[ and end with ]>>] to write code:
+
+The language operates inside [<<[ ... ]>>] blocks.
+
 example:
 <code>
 [<<[
@@ -29,7 +40,7 @@ example:
 ]>>]  
 </code>
 
-The main purpose of Talenha is to generate code. It is a web site with a text editor included into the web site and it handle a system folder to write files.
+The main purpose of Talenha is to generate code.
 
 ## Level 2
 
@@ -43,6 +54,8 @@ For example:
 1,3
 ]>>]
 </code>
+
+This DSL can then be processed directly inside Talenha.
 
 # Level 3
 
@@ -62,10 +75,11 @@ It is a csv data. And with Talenha, you can read the csv. Like this:
 ]>>]
 </code>
 
-Concatenation of string is obtained with no operator. Now,
 
 
 # Level 4
+
+Concatenation of string is obtained with no operator. Now, I show an example of implicit concatenation and arithmetic evaluation rules.
 
 <code>
 [<<[
@@ -80,6 +94,9 @@ Concatenation of string is obtained with no operator. Now,
 </code>
 
 # Features
+
+
+On top of that, you can define custom DSLs using a transpiler system.
 
 ## DSL
 
@@ -192,7 +209,27 @@ select {
 
 # Concepts
 
-The thinking of Talenha is that looks like an assembler language. The goal of Talenha is to generate any text source code.
+Talenha is inspired by low-level assembly-like thinking applied to text generation and transformation.
+
+The goal is to treat code as structured data that can be parsed, transformed, and regenerated.
+
+# Architecture (high level)
+
+It is a web site with a text editor included and it handles a system folder to write files.
+
+- Web-based editor (IDE-like interface)
+- File system abstraction
+- AST-based function storage
+- MySQL persistence layer for functions and transformations
+
+⚠️ These implementation details are separate from the language core.
+
+# Status
+
+This project is a research-oriented language design focused on code generation and DSL construction. It has been used in experimental environments for code generation in a web-based system.
+
+
+
 
 
 
