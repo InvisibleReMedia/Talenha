@@ -1,4 +1,8 @@
-Talenha is a programming language.
+# What is it ?
+
+Talenha is a programming language and a rules definition language to construct a DSL with splitters system and transformation rules.
+
+# How it works ?
 
 It serves for generating code. You can learn the default language, it needs to start with [<<[ and end with ]>>] to write code:
 example:
@@ -23,6 +27,8 @@ For example:
 1,3
 ]>>]
 </code>
+
+# Examples
 
 It is a csv data. And with Talenha, you can read the csv. Like this:
 
@@ -53,6 +59,8 @@ Concatenation of string is obtained with no operator. Now,
   
 ]>>]  
 </code>
+
+# Features
 
 You can create your own DSL by writing this in Talenha:
 
@@ -150,6 +158,8 @@ select {
 }
 ]>>]
 </code>
+
+# Concepts
 
 The thinking of Talenha is that looks like an assembler language. The goal of Talenha is to generate any text source code.
 
