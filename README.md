@@ -21,23 +21,23 @@ For example:
 1,1
 1,2
 1,3
-]>>]  
+]>>]
 </code>
 
 It is a csv data. And with Talenha, you can read the csv. Like this:
 
 <code>
 [<<[
-  u = [<<csv[
-  1,1
-  1,2
-  1,3
-  ]>>],
+  u = [&lt;&lt;csv[
+1,1
+1,2
+1,3
+]>>],
   
   foreach(e from u) {
     print(u(e,0) ":" u(e,1))
   }
-]>>]  
+]>>]
 </code>
 
 Concatenation of string is obtained with no operator. Now,
