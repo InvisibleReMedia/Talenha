@@ -69,6 +69,70 @@ You can create your own DSL by writing this in Talenha:
 ]>>]
 </code>
 
+You can write functions in Talenha.
+
+<code>
+[<<[
+  fun callMyFunction[global](x) {
+    global = 2,
+    print(x)
+  }
+   global = 1,
+   callMyFunction(1),
+   print(global)
+]>>]
+</code>
+
+A function is usable in any file in Talenha because functions are recorded into a MySQL data and keep the AST tree into a field of a table for each function.
+
+In Talenha, you can write:
+
+<code>
+[<<[
+   x = sandbox{closure}[global](parameters) {
+     ....code...
+   },
+   
+]>>]
+</code>
+
+Now, x is a sandbox function. The function can be passed to a function by parameters and you can call your function by using x(params...).
+
+In Talenha, you can write:
+
+<code>
+[<<[
+  key = "apple",
+  select(key) {
+    apple  {
+      ...code..
+    },
+    orange {
+      ...code...
+    }, ...
+  }
+]>>]
+</code>
+
+You can create a switch with the select function.
+
+In Talenha, you can use jump statement in a select statement.
+
+<code>
+[<<[
+   x = 1,
+   select {
+     loop {
+       x = x + 1,
+       if (x > 10) { jump "stop" } else { jump "loop" }
+     },
+     stop { print("end") },
+     default { jump "loop" }
+   }
+]>>]
+</code>
+
+
 
 
 
