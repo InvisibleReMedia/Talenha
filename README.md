@@ -2,26 +2,31 @@ Talenha is a programming language.
 
 It serves for generating code. You can learn the default language, it needs to start with [<<[ and end with ]>>] to write code:
 example:
+<pre>
 [<<[
   print("ok")
   x = 1,
   if (x = 0) { print("0") } else { print(x) }
   
-]>>]
+]>>]  
+</pre>
 
 The main purpose of Talenha is to generate code. It is a web site with a text editor included into the web site and it handle a system folder to write files.
 
 To generate code, you can use DSL (Domain Specific Language) that you can create yourself.
 
 For example:
+<pre>
 [<<csv[
 1,1
 1,2
 1,3
-]>>]
+]>>]  
+</pre>
 
 It is a csv data. And with Talenha, you can read the csv. Like this:
 
+<pre>
 [<<[
   u = [<<csv[
   1,1
@@ -32,9 +37,12 @@ It is a csv data. And with Talenha, you can read the csv. Like this:
   foreach(e from u) {
     print(u(e,0) ":" u(e,1))
   }
+]>>]  
+</pre>
 
 Concatenation of string is obtained with no operator. Now,
 
+<pre>
 [<<[
 
   a = 1,
@@ -43,10 +51,12 @@ Concatenation of string is obtained with no operator. Now,
   print(b) // print 111
   print(c) // print 112
   
-]>>]
+]>>]  
+</pre>
 
 You can create your own DSL by writing this in Talenha:
 
+<pre>
 [<<[
   create transpiler python {
     splitter { ... }
@@ -57,6 +67,8 @@ You can create your own DSL by writing this in Talenha:
     
   }
 ]>>]
+  
+</pre>
 
 
 
